@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <em id="my"></em>
+        <script> 
+            async function add(a,b) {
+                let response = await a+b;
+                display(response);
+
+            }
+
+            function display(some) {
+                document.getElementById("my").innerHTML= some;
+            }
+
+            add(0,25)
+        </script>
+    </body>
+</html>

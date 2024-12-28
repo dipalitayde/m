@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <em id="my"></em>
+        <script>
+            function myDisplayer(some) {
+                document.getElementById("my").innerHTML = some;
+            
+            }
+
+            function sum(a,b) {
+                var sum = a+b;
+                myDisplayer(sum);
+
+            }
+
+            let myPromise = new Promise( function ( myResolve, myReject) 
+            {
+                let x=9;
+                 if ( x==0) {
+                    myResolve("fine");
+
+                 }
+
+                 else {
+                    myReject("this is wrong ");
+                 }
+            });
+
+            myPromise.then(
+                function (value) { sum(6,6);},
+                function (error) { sum(error);}
+            );
+        </script>
+    </body>
+</html>
